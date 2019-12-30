@@ -15,7 +15,7 @@ public class WebMvcCongfig extends WebMvcConfigurerAdapter {
 //        registry.addViewController("/text").setViewName("success");
 //    }
 
-    @Bean //将组件组册在容器
+    @Bean //将组件注册在容器
     public WebMvcConfigurerAdapter webMvcConfigurerAdapter() {
         WebMvcConfigurerAdapter adpater = new WebMvcConfigurerAdapter() {
             @Override
