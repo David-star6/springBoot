@@ -11,10 +11,14 @@
 	<hr>
 	<div align="center">
 		<form action="" method="post">
-			用户名:<input name=""/><br>
-			密码:<input name=""><br/>
-			<input type="submit" value="登陆">
+			<div><b th:text="#{login.username}">username</b><input name=""/></div>
+			<div><b th:text="#{login.password}">password</b><input name=""></div>
+			<input type="submit" value="登陆" th:text="#{login.tip}">
 		</form>
 	</div>
+<div>
+	<a th:href="@{/index(l='zh_CN')}">中文</a>
+	<a th:href="@{/index(l='en_US')}">英文</a>
+</div>
 </body>
 </html>
