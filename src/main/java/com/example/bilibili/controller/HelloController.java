@@ -1,8 +1,10 @@
 package com.example.bilibili.controller;
 
+import com.example.bilibili.exception.UserNotExistException;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -16,7 +18,10 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String hello() {
+    public String hello(@RequestParam("user") String user) {
+        if(user.equals("aaa")){
+           throw new UserNotExistException();
+       }
         Locale msg3 = Locale.getDefault();
         System.out.print(msg3);
 //        getMessage(code,args, defaultMessage,locale);

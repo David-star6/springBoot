@@ -8,11 +8,5 @@
 </head>
 <body>
 
-<div th:fragment="header">
-    <p th:text="${session.loginUser}" th:if="${not #strings.isEmpty(session.loginUser)}"></p>
-</div>
-<div th:fragment="copyright">
-    © 2020 david
-</div>
 </body>
 </html>
