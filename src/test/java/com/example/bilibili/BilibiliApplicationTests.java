@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 @SpringBootTest
 class BilibiliApplicationTests {
 
@@ -18,6 +22,9 @@ class BilibiliApplicationTests {
 
     @Autowired
     ApplicationContext ioc;
+
+    @Autowired
+    DataSource dataSource;
 
     @Test
     public void testHelloService(){
@@ -35,6 +42,9 @@ class BilibiliApplicationTests {
     @Test
     void contextLoads() {
         System.out.println(person);
+        //测试jdbc链接数据库
+        System.out.println((dataSource.getClass()));
+
     }
 
 }

@@ -1,17 +1,20 @@
 package com.example.bilibili.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 public class LoginController {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
     //    @RequestMapping(value = "/user/login",method = RequestMethod.POST)
     @PostMapping(value = "/user/login")
@@ -27,5 +30,15 @@ public class LoginController {
         map.put("msg","error");
         return "index";
     }
+
+    @ResponseBody
+    @GetMapping("/article")
+    public Map<String, Object> map(){
+      List<Map<String,Object>> list = jdbcTemplate.queryForList("select * FROM article");
+      return list.get(0);
+    }
+
+
+
 
 }
