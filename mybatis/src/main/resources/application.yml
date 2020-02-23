@@ -22,3 +22,16 @@ server:
 #  lists:
 #    - list
 #    - zhaoliu
+spring:
+  datasource:
+    username: root
+    password: liuyong1993
+    url: jdbc:mysql://127.0.0.1:3306/blog
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    MaxActive: 5
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
