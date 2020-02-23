@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link th:href="@{/webjars/jquery/3.3.1/jquery.js}">
+	<link th:href="@{/css/login.css}" rel="stylesheet">
+</head>
+<body>
+	<h1 align="center">欢迎登陆管理系统</h1>
+	<hr>
+	<div align="center">
+		<form action="" th:action="@{/user/login}" method="post">
+			<div><b th:text="#{login.username}">username</b><input name="username"/></div>
+			<div><b th:text="#{login.password}">password</b><input name="password"></div>
+			<input type="submit" value="登陆" th:text="#{login.tip}">
+			<!--/*@thymesVar id="msg" type=""*/-->
+			<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+		</form>
+	</div>
+<div>
+	<a th:href="@{/index(l='zh_CN')}">中文</a>
+	<a th:href="@{/index(l='en_US')}">英文</a>
+</div>
+</body>
+</html>
