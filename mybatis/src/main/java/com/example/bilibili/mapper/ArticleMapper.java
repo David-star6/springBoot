@@ -1,7 +1,7 @@
 package com.example.bilibili.mapper;
 
 
-import com.example.bilibili.bean.Article;
+import com.example.bilibili.emtity.Article;
 import org.apache.ibatis.annotations.*;
 
 //@Mapper

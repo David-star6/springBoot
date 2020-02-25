@@ -1,4 +1,4 @@
-package com.example.bilibili.bean;
+package com.example.bilibili.emtity;
 
 import java.util.Date;
 

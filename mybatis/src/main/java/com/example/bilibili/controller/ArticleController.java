@@ -1,6 +1,6 @@
 package com.example.bilibili.controller;
 
-import com.example.bilibili.bean.Article;
+import com.example.bilibili.emtity.Article;
 import com.example.bilibili.mapper.ArticleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

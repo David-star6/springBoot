@@ -8,7 +8,7 @@
 
 <!--    public void insertArticleContent(String content);-->
 <!--    -->
-    <select id="getArticleByTitle" resultType="com.example.bilibili.bean.Article">
+    <select id="getArticleByTitle" resultType="com.example.bilibili.emtity.Article">
     SELECT * FROM article where title = #{title}
   </select>
     
