@@ -16,5 +16,20 @@
     SELECT * FROM article
   </select>
 
+    <delete id="deleteById" flushCache="true" timeout="20">
+      delete from article where id = #{id}
+    </delete>
+
+    <update id="updateById"   flushCache="true" timeout="20">
+  update article set
+    title = #{title},
+    content = #{content},
+    html_content = #{htmlContent},
+    markdown_content = #{markDownContent},
+    update_timer = #{updateTimer}
+  where id = #{id}
+</update>
+
+
 
 </mapper>
