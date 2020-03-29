@@ -13,6 +13,6 @@ public interface ArticleMapper {
 
     void deleteById(String id);
 
-    Article updateById(String title, String content, String htmlContent, String markDownContent, Date updateTimer, String id);
+    Integer updateById(String title, String content, String htmlContent, String markDownContent, Date updateTimer, String id);
 
 }

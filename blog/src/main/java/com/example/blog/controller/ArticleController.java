@@ -17,14 +17,14 @@ public class ArticleController {
     @Autowired
     ArticleMapper articleMapper;
 
-    @GetMapping("/save")
-    public WebResponse save(@RequestParam("title") String account,
+    @PostMapping("/save")
+    public WebResponse save(@RequestParam("title") String title,
                             @RequestParam("content") String content,
                             @RequestParam("htmlContent") String htmlContent,
                             @RequestParam("markdonwContent") String markdonwContent) throws Exception {
         Date timer = new Date(System.currentTimeMillis());
         HashMap map = new HashMap();
-        Integer uid = articleMapper.saveArticle(account, content, htmlContent, markdonwContent, timer);
+        Integer uid = articleMapper.saveArticle(title, content, htmlContent, markdonwContent, timer);
         if (uid != null) {
             map.put("id", uid);
         }
@@ -45,7 +45,7 @@ public class ArticleController {
 
     }
 
-    @GetMapping("/update")
+    @PostMapping("/update")
     public WebResponse update(@RequestParam("id") String id,
                               @RequestParam("title") String account,
                               @RequestParam("content") String content,

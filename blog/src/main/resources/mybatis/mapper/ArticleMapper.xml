@@ -20,7 +20,7 @@
       delete from article where id = #{id}
     </delete>
 
-    <update id="updateById"   flushCache="true" timeout="20">
+    <update id="updateById" flushCache="true" timeout="20">
   update article set
     title = #{title},
     content = #{content},

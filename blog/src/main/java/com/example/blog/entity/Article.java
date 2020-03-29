@@ -1,5 +1,6 @@
 package com.example.blog.entity;
 
+import java.sql.Date;
 import java.util.HashMap;
 
 public class Article {
@@ -8,6 +9,15 @@ public class Article {
     private String content;
     private String htmlContent;
     private String markdownContent;
+    private Date updateTimer;
+
+    public Date getUpdateTimer() {
+        return updateTimer;
+    }
+
+    public void setUpdateTimer(Date updateTimer) {
+        this.updateTimer = updateTimer;
+    }
 
     public Integer getId() {
         return id;
