@@ -38,7 +38,7 @@ public class ArticleController {
         return list.size() > 0 ? new WebResponse(BaseConstant.SUCCESS, "操作成功", list) : new WebResponse(BaseConstant.SUCCESS, "没有数据", list);
     }
 
-    @GetMapping("/delete")
+    @PostMapping("/delete")
     public WebResponse delete(@RequestParam("id") String id) throws Exception {
         articleMapper.deleteById(id);
         return new WebResponse(BaseConstant.SUCCESS, "操作成功", null);

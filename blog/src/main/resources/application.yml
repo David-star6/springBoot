@@ -17,3 +17,6 @@ mybatis:
 code:
   success: 200
   error: -1
+
+#file:
+#  uploadFolder: /
