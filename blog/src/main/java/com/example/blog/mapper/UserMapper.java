@@ -8,4 +8,6 @@ public interface UserMapper {
 
     public User getUserByAccountPassword(String account, String password);
 
+    public User getUserById(Integer id);
+
 }

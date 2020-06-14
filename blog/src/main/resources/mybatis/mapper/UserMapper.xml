@@ -12,6 +12,9 @@
     SELECT * FROM user where account = #{account}
   </select>
 
+    <select id="getUserById" resultType="com.example.blog.entity.User">
+        SELECT * FROM user where id = #{id}
+    </select>
 
     <select id="getUserByAccountPassword" resultType="com.example.blog.entity.User">
     SELECT * FROM user where account = #{account} AND password = #{password}

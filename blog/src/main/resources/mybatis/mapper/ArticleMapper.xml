@@ -8,6 +8,10 @@
 
     <!--    public void insertArticleContent(String content);-->
     <!--    -->
+  <select id="getArticleById" resultType="com.example.blog.entity.Article">
+         SELECT * FROM article where id = #{id}
+  </select>
+
     <insert id="saveArticle" useGeneratedKeys="true" keyProperty="id">
     insert into article(title,content,html_content,markdown_content,update_timer) values (#{title}, #{content},#{htmlContent},#{markDownContent},#{updateTimer})
   </insert>

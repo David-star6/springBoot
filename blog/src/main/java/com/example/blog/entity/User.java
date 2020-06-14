@@ -4,7 +4,7 @@ public class User {
     private Integer id;
     private String role;
     private Integer roleType;
-    private String userName;
+
     private String account;
 
     public Integer getId() {
@@ -19,10 +19,6 @@ public class User {
         return roleType;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -33,10 +29,6 @@ public class User {
 
     public void setRoleType(Integer roleType) {
         this.roleType = roleType;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getAccount() {
