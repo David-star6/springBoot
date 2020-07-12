@@ -9,6 +9,15 @@ spring:
     password: liuyong1993
     initialSize: 5
     MaxActive: 5
+  redis:
+    port: 6379
+    host: localhost
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-wait: 1000
+        max-idle: 10
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
