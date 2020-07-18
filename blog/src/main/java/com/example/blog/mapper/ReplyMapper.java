@@ -1,9 +1,9 @@
 package com.example.blog.mapper;
 
-import java.util.Date;
+import com.example.blog.entity.Reply;
 
 public interface ReplyMapper {
 
-    Integer insertReply(Integer articleId, String content, Integer userId, Date createTimer);
+    Integer insertReply(Reply reply);
 
 }

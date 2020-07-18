@@ -9,6 +9,13 @@ public class Reply {
     private Date createTimer;
     private Integer userId;
 
+   public Reply(Integer articleId, String content, Date createTimer, Integer userId) {
+        this.articleId = articleId;
+        this.content = content;
+        this.createTimer = createTimer;
+        this.userId = userId;
+    }
+
     public Integer getUserId() {
         return userId;
     }

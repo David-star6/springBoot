@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.example.blog.mapper.ReplyMapper">
 
 
-     <insert id="insertReply" >
+     <insert id="insertReply"  useGeneratedKeys="true" keyProperty="id">
        insert into reply(user_id , content, article_id, create_timer) values (#{userId},  #{content}, #{articleId}, #{createTimer})
      </insert>
 
